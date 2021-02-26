@@ -25,7 +25,7 @@ def anio_bisiesto(anio):
     '''
     if anio%4 == 0:
       if anio%100 == 0:
-        if anio/400 == 0:
+        if anio%400 == 0:
           return True
         else:
           return False
@@ -37,7 +37,7 @@ def anio_bisiesto(anio):
     pass
 
 def contar_valles():
-    r'''Contar el número de valles
+    '''Contar el número de valles
 
     Esta función debe recibir como argumento una lista de -1's, 0's y 1's, y lo 
     que representan son las subidas y las bajadas en una ruta de caminata. -1
