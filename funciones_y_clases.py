@@ -1,11 +1,13 @@
 global1 = 34
 
-def cambiar_global():
+def cambiar_global(var1):
     '''Cambiar una variable global
-
     Esta función debe asignarle a la variable global `global1` el valor que se
     le pasa como único argumento posicional.
     '''
+    #global global1
+    global1 = var1
+    return global1
     pass
 
 
