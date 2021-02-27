@@ -99,16 +99,21 @@ def saltando_rocas(listarocas):
     jugador para ganar la partida
     '''
     saltos = 0
+    cont = 0
     for i in listarocas:
-      if i==0 and (i+1)==0:
+      cont += 1
+      if i==0 and (listarocas[cont])==0:
         saltos += 1
-      elif i==0 and (i+1)==1:
+      elif i==0 and (listarocas[cont])==1:
         saltos += 1
-      elif i==1 and (i+1)==0:
+      elif i==1 and (listarocas[cont])==0:
         saltos += 1
       else:
         break
+    print(saltos)
+    return(saltos)
     pass
+saltando_rocas([0,1,0,1,0,1,])
 
 def pares_medias(listapares):
     '''Contar pares de medias
