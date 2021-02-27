@@ -58,11 +58,12 @@ def contar_valles(lista):
     cont = 0
     temp = False
     cont2 = 0
-    longitud = 0
+    longitud = len(lista)
     for i in lista:
-      longitud = len(lista)
       cont2 += 1
+      
       if i == -1:
+        temp = False
         while temp == False:
           if cont2 < longitud:
             if lista[cont2]==1:
