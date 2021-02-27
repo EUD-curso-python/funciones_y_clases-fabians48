@@ -7,9 +7,10 @@ def cambiar_global(var1):
     '''
     #global global1
     global1 = var1
+    print(var1)
     return global1
     pass
-
+cambiar_global(5)
 
 def anio_bisiesto(anio):
     '''Responder si el entero pasado como argumento es un año bisiesto
@@ -58,8 +59,9 @@ def contar_valles(lista):
     for i in lista:
       if i == 0:
         cont += 1
+    print(cont)
     return cont
-
+    
     pass
 
 def saltando_rocas():
