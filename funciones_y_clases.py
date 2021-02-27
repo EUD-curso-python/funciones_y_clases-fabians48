@@ -114,7 +114,8 @@ def pares_medias(lista):
     pares= {}
     #lista = []
     for i in lista:
-      pares[i]= int(lista.count(i)/2)
+      if int(lista.count(i)/2)==1:
+        pares[i]= int(lista.count(i)/2)
     print(pares)
     pass
 
