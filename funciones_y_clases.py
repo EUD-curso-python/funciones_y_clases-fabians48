@@ -84,7 +84,7 @@ def contar_valles(lista):
 
 #contar_valles([-1,1,0,1,1,-1,0,0,1,-1,1,1,-1,-1])
 
-def saltando_rocas():
+def saltando_rocas(listarocas):
     '''Mínimo número de saltos en las rocas
 
     Esta función hace parte de un juego en el que el jugador debe cruzar un río
@@ -98,9 +98,19 @@ def saltando_rocas():
     El objetivo es devolver el número mínimo de saltos que debe realizar el 
     jugador para ganar la partida
     '''
+    saltos = 0
+    for i in listarocas:
+      if i==0 and (i+1)==0:
+        saltos += 1
+      elif i==0 and (i+1)==1:
+        saltos += 1
+      elif i==1 and (i+1)==0:
+        saltos += 1
+      else:
+        break
     pass
 
-def pares_medias(lista):
+def pares_medias(listapares):
     '''Contar pares de medias
 
     Esta función debe recibir como argumento una lista de enteros. Cada elemento
@@ -112,9 +122,9 @@ def pares_medias(lista):
     '''
 
     pares= {}
-    for i in lista:
-      if int(lista.count(i)/2)!=0:
-        pares[i]= int(lista.count(i)/2)
+    for i in listapares:
+      if int(listapares.count(i)/2)!=0:
+        pares[i]= int(listapares.count(i)/2)
     print(pares)
     return pares
     pass
