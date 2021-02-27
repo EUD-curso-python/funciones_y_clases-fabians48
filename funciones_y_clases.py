@@ -7,10 +7,10 @@ def cambiar_global(var1):
     '''
     global global1
     global1 = var1
-    print(var1)
+#    print(var1)
     return global1
     pass
-cambiar_global(5)
+#cambiar_global(5)
 
 def anio_bisiesto(anio):
     '''Responder si el entero pasado como argumento es un año bisiesto
@@ -56,13 +56,35 @@ def contar_valles(lista):
     de 3 valles.
     '''
     cont = 0
+    temp = False
+    cont2 = 0
+    longitud = 0
     for i in lista:
-      if i == 0:
-        cont += 1
+      longitud = len(lista)
+      cont2 += 1
+      if i == -1:
+        while temp == False:
+          if cont2 < longitud:
+            if lista[cont2]==1:
+              print(lista[i],lista[cont2],"entra2")
+              cont += 1
+              temp = True
+            elif lista[cont2]==-1:
+              print(lista[i],lista[cont2],"entra-1")
+              cont2 += 1
+              temp = False
+            elif lista[cont2]==0:  
+              print(lista[i],lista[cont2],"entra0")
+              cont2 += 1
+              temp = False
+          else:
+            temp = True
     print(cont)
     return cont
     
     pass
+
+contar_valles([-1,1,0,1,1,-1,0,0,1,-1,1,1,-1,-1])
 
 def saltando_rocas():
     '''Mínimo número de saltos en las rocas
