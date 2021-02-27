@@ -113,12 +113,13 @@ def pares_medias(lista):
 
     pares= {}
     for i in lista:
-      if int(lista.count(i)/2)==1:
+      if int(lista.count(i)/2)!=0:
         pares[i]= int(lista.count(i)/2)
     print(pares)
+    return pares
     pass
 
-pares_medias([1,1,2,2,3])
+pares_medias([1,1,2,2,3,1])
 
 # Crear una clase llamada `ListaComa` que reciba en su constructor un iterable
 # con el valor inicial para una lista que se guardará en un atributo llamado 
