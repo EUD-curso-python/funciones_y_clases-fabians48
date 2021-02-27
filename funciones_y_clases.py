@@ -61,21 +61,16 @@ def contar_valles(lista):
     cont3 = 0
     longitud = len(lista)
     for i in lista:
-      #cont2 += 1
       cont3 += 1
-      print("conteo2 solo",cont2,"conteo3",cont3)
       if i == -1:
         cont2=cont3
         temp = False
         while temp == False:
-          #print("conteo2",cont2,lista[cont2])
           if cont2 < longitud:
             if lista[cont2]==1:
-              print(lista[i],lista[cont2],"entra2")
               cont += 1
               temp = True
             elif lista[cont2]==0:  
-              print(lista[i],lista[cont2],"entra0")
               cont2 += 1
               temp = False
             else:
