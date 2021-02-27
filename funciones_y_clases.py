@@ -119,7 +119,7 @@ def pares_medias(lista):
     return pares
     pass
 
-pares_medias([1,1,2,2,3,1])
+#pares_medias([1,1,2,2,3,1])
 
 # Crear una clase llamada `ListaComa` que reciba en su constructor un iterable
 # con el valor inicial para una lista que se guardará en un atributo llamado 
