@@ -82,7 +82,7 @@ def contar_valles(lista):
     
     pass
 
-contar_valles([-1,1,0,1,1,-1,0,0,1,-1,1,1,-1,-1])
+#contar_valles([-1,1,0,1,1,-1,0,0,1,-1,1,1,-1,-1])
 
 def saltando_rocas():
     '''Mínimo número de saltos en las rocas
@@ -100,7 +100,7 @@ def saltando_rocas():
     '''
     pass
 
-def pares_medias():
+def pares_medias(lista):
     '''Contar pares de medias
 
     Esta función debe recibir como argumento una lista de enteros. Cada elemento
@@ -110,7 +110,15 @@ def pares_medias():
     uno de los colores que se encuentren en la lista, y los valores son la 
     cantidad de pares que se han encontrado para cada color.
     '''
+
+    pares= {}
+    #lista = []
+    for i in lista:
+      pares[i]= int(lista.count(i)/2)
+    print(pares)
     pass
+
+pares_medias([1,1,2,2,3])
 
 # Crear una clase llamada `ListaComa` que reciba en su constructor un iterable
 # con el valor inicial para una lista que se guardará en un atributo llamado 
