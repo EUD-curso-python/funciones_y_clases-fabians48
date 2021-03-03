@@ -107,22 +107,9 @@ def saltando_rocas(listarocas):
         if cont == longitud:
           break
         else:
-          if (listarocas[cont])==0:
-            saltos += 1
-      elif i==0:
-        if cont == longitud:
-          break
-        else:
           if (listarocas[cont])==1:
             saltos += 1
-      elif i==1:
-        if cont == longitud:
-          break
-        else:
-          if (listarocas[cont])==0:
-            saltos += 1
-      else:
-        break
+      
     print(saltos)
     return(saltos)
     pass
