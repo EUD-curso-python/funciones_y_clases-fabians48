@@ -100,19 +100,33 @@ def saltando_rocas(listarocas):
     '''
     saltos = 0
     cont = 0
+    longitud = len(listarocas)
     for i in listarocas:
       cont += 1
-      if i==0 and (listarocas[cont])==0:
-        saltos += 1
-      elif i==0 and (listarocas[cont])==1:
-        saltos += 1
-      elif i==1 and (listarocas[cont])==0:
-        saltos += 1
+      if i==0:
+        if cont == longitud:
+          break
+        else:
+          if (listarocas[cont])==0:
+            saltos += 1
+      elif i==0:
+        if cont == longitud:
+          break
+        else:
+          if (listarocas[cont])==1:
+            saltos += 1
+      elif i==1:
+        if cont == longitud:
+          break
+        else:
+          if (listarocas[cont])==0:
+            saltos += 1
       else:
         break
     print(saltos)
     return(saltos)
     pass
+
 saltando_rocas([0,1,0,1,0,1,])
 
 def pares_medias(listapares):
