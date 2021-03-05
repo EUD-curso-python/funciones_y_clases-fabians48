@@ -231,4 +231,3 @@ print(nom.nombre_completo())
 # Ejemplo:
 # si `fecha_nacimiento` es 1985-10-21 y la fecha actual es 2020-10-20, el método
 # `edad` debe devover 35.
-
