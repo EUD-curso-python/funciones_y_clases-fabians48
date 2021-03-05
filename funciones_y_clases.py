@@ -112,19 +112,26 @@ def saltando_rocas(listarocas):
           print("entre 0 ")  
       else:
         print("el contador va en ",cont)
+        if listarocas[cont]==1 and listarocas[cont+1]==1:
+          print("entre 1 1")
+          break
+        if listarocas[cont]==1 and listarocas[cont+1]==0:
+          print("entre 1 0")
+          salto += 1
+          cont += 1
         if listarocas[cont]==0 and listarocas[cont+1]==1:
           salto += 1
-          print("entre 1 ")
+          print("entre 0 1")
           cont += 1
         elif listarocas[cont]==0 and listarocas[cont+1]==0:
           salto += 1
-          print("entre 2 ")
-          cont += 2
+          print("entre 0 0")
+          cont += 1
         cont += 1
     print(salto)
     return(salto)
 
-saltando_rocas([0,1,0,1,0,1,0,1])
+saltando_rocas([1,0,0,1,0,1,0,0])
 
 
 def pares_medias(listapares):
