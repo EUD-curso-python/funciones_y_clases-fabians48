@@ -107,19 +107,21 @@ def saltando_rocas(listarocas):
     while cont < longitud:
       if cont+1 == longitud:
         if listarocas[cont]==0:
+          print("el contador va en ",cont)
           salto += 1
           cont += 1
           print("entre 0 ")  
       else:
-        print("el contador va en ",cont)
+        print("el contador va en ini",cont)
         if listarocas[cont]==1 and listarocas[cont+1]==1:
           print("entre 1 1")
           break
-        if listarocas[cont]==1 and listarocas[cont+1]==0:
+        elif listarocas[cont]==1 and listarocas[cont+1]==0:
           print("entre 1 0")
           salto += 1
           cont += 1
-        if listarocas[cont]==0 and listarocas[cont+1]==1:
+          print("el contador va enasig",cont)
+        elif listarocas[cont]==0 and listarocas[cont+1]==1:
           salto += 1
           print("entre 0 1")
           cont += 1
@@ -128,9 +130,9 @@ def saltando_rocas(listarocas):
           print("entre 0 0")
           cont += 1
         cont += 1
+        print("el contador va en fin",cont)
     print(salto)
     return(salto)
-
 saltando_rocas([1,0,0,1,0,1,0,0])
 
 
