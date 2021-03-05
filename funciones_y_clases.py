@@ -174,7 +174,7 @@ class ListaComa:
   
 
 lis = ListaComa([1,2,3])
-print(lis)
+#print(lis)
 
 
 
@@ -194,9 +194,23 @@ print(lis)
 # si `nombres` es ['Juan', 'David'] y `apellidos` es ['Torres', 'Salazar'],
 # el método `nombre completo` debe devolver  'Juan David Torres Salazar'
 
+class Persona:
+  def __init__(self, nombres=[], apellidos=[]):
+    self.nombres = nombres
+    self.apellidos = apellidos
 
+  def nombre_completo(self):
+    #cadena1=self.padre+","+self.madre
+    cadena1=""
+    for i in self.nombres:
+      if cadena1 == "":
+        cadena1 = str(i)
+      else:
+        cadena1 = cadena1 + "jhjkhjh " + str(i)
+    return cadena1
 
-
+nombres = ListaComa(['Fabian', 'Emilio'])
+print(nombres)
 
 # Crear una clase llamada `Persona1` que herede de la clase `Persona`, y que en su
 # constructor reciba además de los atributos del padre, una variable tipo 
