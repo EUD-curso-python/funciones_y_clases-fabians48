@@ -108,16 +108,13 @@ def saltando_rocas(listarocas):
     while cont1 < longitud-1:
       
       if cont1+2 < longitud and listarocas[cont1+2] == 0:
-        print("entra1")
         cont += 1
         cont1 += 2 
       else: 
-        print("entra2")
         cont += 1
         cont1 += 1
-      #saltando_rocas.append(('saltando_rocas', c, [ll], {}))
       saltos = cont
-      print(saltos)
+#      print(saltos)
     return(saltos)
 saltando_rocas([1,1,0,0])
 
