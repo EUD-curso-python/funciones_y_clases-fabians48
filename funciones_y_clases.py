@@ -111,6 +111,9 @@ def saltando_rocas(listarocas):
           salto += 1
           cont += 1
           print("entre 0 ")  
+        else:          
+          cont += 1
+          print("entre 1 ")  
       else:
         print("el contador va en ini",cont)
         if listarocas[cont]==1 and listarocas[cont+1]==1:
@@ -133,7 +136,7 @@ def saltando_rocas(listarocas):
         print("el contador va en fin",cont)
     print(salto)
     return(salto)
-saltando_rocas([1,0,0,1,0,1,0,0])
+saltando_rocas([0,0,0,1,0,1,0,1])
 
 
 def pares_medias(listapares):
