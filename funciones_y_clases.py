@@ -233,7 +233,6 @@ nom = Persona(["fabian", "emilio"], ["solano", "aragon"])
 # `edad` debe devover 35.
 
 import datetime
-from dateutil.relativedelta import relativedelta
 class Persona1(Persona):
   def __init__(self, nombres, apellidos, fecha_nacimiento):
     super().__init__(nombres,apellidos)
