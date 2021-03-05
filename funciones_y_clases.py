@@ -115,10 +115,11 @@ def saltando_rocas(listarocas):
         if listarocas[cont]==0 and listarocas[cont+1]==1:
           salto += 1
           print("entre 1 ")
+          cont += 1
         elif listarocas[cont]==0 and listarocas[cont+1]==0:
           salto += 1
           print("entre 2 ")
-          cont += 1
+          cont += 2
         cont += 1
     print(salto)
     return(salto)
