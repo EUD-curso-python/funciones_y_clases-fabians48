@@ -164,12 +164,13 @@ class ListaComa:
   def __init__(self, lista=[]):
     self.lista = lista
   def __str__(self):
+    cadena=""
     for i in self.lista:
-      cadena = str(i) + ","
+      cadena = cadena + "," + str(i)
     return cadena
   
 
-lis = ListaComa([1,2])
+lis = ListaComa([1,2,3])
 print(lis)
 
 
