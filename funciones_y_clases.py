@@ -206,11 +206,12 @@ class Persona:
       if cadena1 == "":
         cadena1 = str(i)
       else:
-        cadena1 = cadena1 + "jhjkhjh " + str(i)
+        cadena1 = cadena1 + " " + str(i)
+    print(cadena1)
     return cadena1
 
-nombres = ListaComa(['Fabian', 'Emilio'])
-print(nombres)
+nombres = Persona(["Fabian", "Emilio"])
+nombres.nombre_completo()
 
 # Crear una clase llamada `Persona1` que herede de la clase `Persona`, y que en su
 # constructor reciba además de los atributos del padre, una variable tipo 
