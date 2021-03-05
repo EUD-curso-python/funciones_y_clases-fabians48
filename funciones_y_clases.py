@@ -219,7 +219,7 @@ class Persona:
     return cadena3
 
 nom = Persona(["fabian", "emilio"], ["solano", "aragon"])
-print(nom.nombre_completo())
+#print(nom.nombre_completo())
 
 # Crear una clase llamada `Persona1` que herede de la clase `Persona`, y que en su
 # constructor reciba además de los atributos del padre, una variable tipo 
@@ -231,3 +231,16 @@ print(nom.nombre_completo())
 # Ejemplo:
 # si `fecha_nacimiento` es 1985-10-21 y la fecha actual es 2020-10-20, el método
 # `edad` debe devover 35.
+
+import datetime
+class Persona1(Persona):
+  def __init__(self, nombres, apellidos, fecha_nacimiento):
+    super().__init__(nombres,apellidos)
+    self.fecha_nacimiento = fecha_nacimiento
+  def edad(self):
+    fechaactual = datetime.datetime.now()
+    print(fechaactual)
+    return(fechaactual)
+
+edd = Persona1(["fabian", "emilio"], ["solano", "aragon"], "1985-10-21")
+print(edd.edad())
