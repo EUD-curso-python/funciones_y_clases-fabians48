@@ -166,7 +166,10 @@ class ListaComa:
   def __str__(self):
     cadena=""
     for i in self.lista:
-      cadena = cadena + "," + str(i)
+      if cadena == "":
+        cadena = str(i)
+      else:
+        cadena = cadena + "," + str(i)
     return cadena
   
 
