@@ -209,17 +209,17 @@ class Persona:
       else:
         cadena1 = cadena1 + " " + str(i)
 
-    for i in self.apellidos:
+    for j in self.apellidos:
       if cadena2 == "":
-        cadena2 = str(i)
+        cadena2 = str(j)
       else:
-        cadena2 = cadena2 + " " + str(i)
+        cadena2 = cadena2 + " " + str(j)
+    
     cadena3 = cadena1 + " " + cadena2
     return cadena3
 
-nombres = Persona(["Fabian", "Emilio"])
-apellidos = Persona(["Solano", "Aragon"])
-print(nombres.nombre_completo())
+nom = Persona(["Fabian", "Emilio"], ["Solano", "Aragon"])
+print(nom.nombre_completo())
 
 # Crear una clase llamada `Persona1` que herede de la clase `Persona`, y que en su
 # constructor reciba además de los atributos del padre, una variable tipo 
