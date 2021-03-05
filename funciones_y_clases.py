@@ -240,10 +240,12 @@ class Persona1(Persona):
     self.fecha_nacimiento = fecha_nacimiento
   def edad(self):
     #fechaactual = datetime.datetime.now()
-    fecha_nacimiento = datetime.datetime.strptime("1985-10-21", "%Y-%m-%d")
-    edad1 = datetime.datetime.now().year - fecha_nacimiento.year
-    edad1 -= ((datetime.datetime.now().month, datetime.datetime.now().day) < (fecha_nacimiento.month, fecha_nacimiento.day))
+    #fecha_nacimiento = datetime.datetime.strptime("1985-10-21", "%Y-%m-%d")
+    edad1 = datetime.datetime.now().year - self.fecha_nacimiento.year
+    edad1 -= ((datetime.datetime.now().month, datetime.datetime.now().day) < (self.fecha_nacimiento.month, self.fecha_nacimiento.day))
     return(edad1)
 
-edd = Persona1(["fabian", "emilio"], ["solano", "aragon"], "1985-10-21")
+
+fecha = datetime.datetime.strptime("1985-10-21", "%Y-%m-%d")
+edd = Persona1(["fabian", "emilio"], ["solano", "aragon"], fecha)
 print(edd.edad())
