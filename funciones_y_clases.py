@@ -205,20 +205,20 @@ class Persona:
     cadena3=""
     for i in self.nombres:
       if cadena1 == "":
-        cadena1 = str(i)
+        cadena1 = str(i).capitalize()
       else:
-        cadena1 = cadena1 + " " + str(i)
+        cadena1 = cadena1 + " " + str(i).capitalize()
 
     for j in self.apellidos:
       if cadena2 == "":
-        cadena2 = str(j)
+        cadena2 = str(j).capitalize()
       else:
-        cadena2 = cadena2 + " " + str(j)
+        cadena2 = cadena2 + " " + str(j).capitalize()
     
     cadena3 = cadena1 + " " + cadena2
     return cadena3
 
-nom = Persona(["Fabian", "Emilio"], ["Solano", "Aragon"])
+nom = Persona(["fabian", "emilio"], ["solano", "aragon"])
 print(nom.nombre_completo())
 
 # Crear una clase llamada `Persona1` que herede de la clase `Persona`, y que en su
