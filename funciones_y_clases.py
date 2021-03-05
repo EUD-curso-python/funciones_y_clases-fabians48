@@ -111,22 +111,25 @@ def saltando_rocas(listarocas):
           #if (listarocas[cont])==1:
             #saltos += 1
     while cont < longitud:
+      #print("entra cont", cont)
       if listarocas[cont]==0:
         if cont+1 == longitud:
           if listarocas[cont]==0:
             saltos += 1
-          break
+          else:
+            break
         else:
           if (listarocas[cont+1])==1:
-            print('cont',cont)
+     #       print('cont',cont)
             saltos += 1
+      else:
+        cont += 1  
       cont += 1
-    
-    print(saltos)
+    #print(saltos)
     return(saltos)
     pass
 
-saltando_rocas([1,0,1,0,1,0,1,0])
+saltando_rocas([0,1,1,0,0,0,1,0])
 
 def pares_medias(listapares):
     '''Contar pares de medias
@@ -155,6 +158,19 @@ def pares_medias(listapares):
 # los elementos del atributo `lista` unidos a través de comas. Ejemplo:
 # si `lista` es [1,2,3,4], __str__ debe devolver '1,2,3,4'
 
+class ListaComa:
+  
+  
+  def __init__(self, lista=[]):
+    self.lista = lista
+  def __str__(self):
+    for i in self.lista:
+      cadena = str(i) + ","
+    return cadena
+  
+
+lis = ListaComa([1,2])
+print(lis)
 
 
 
