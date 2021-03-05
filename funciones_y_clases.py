@@ -98,45 +98,28 @@ def saltando_rocas(listarocas):
     El objetivo es devolver el número mínimo de saltos que debe realizar el 
     jugador para ganar la partida
     '''
-    salto = 0
-    cont = 0
     
-    longitud = len(listarocas)
-    
-  
-    while cont < longitud:
-      if cont+1 == longitud:
-        if listarocas[cont]==0:
-          print("el contador va en ",cont)
-          salto += 1
-          cont += 1
-          print("entre 0 ")  
-        else:          
-          cont += 1
-          print("entre 1 ")  
-      else:
-        print("el contador va en ini",cont)
-        if listarocas[cont]==1 and listarocas[cont+1]==1:
-          print("entre 1 1")
-          break
-        elif listarocas[cont]==1 and listarocas[cont+1]==0:
-          print("entre 1 0")
-          salto += 1
-          cont += 1
-          print("el contador va enasig",cont)
-        elif listarocas[cont]==0 and listarocas[cont+1]==1:
-          salto += 1
-          print("entre 0 1")
-          #cont += 1
-        elif listarocas[cont]==0 and listarocas[cont+1]==0:
-          salto += 1
-          print("entre 0 0")
-          cont += 1
+    #saltando_rocas = []
+    #ll = [1,1,0,0]
+    saltos =0
+    cont = 0; #=c
+    cont1 = 0 #i = 0; 
+    longitud = len(listarocas) #l = len(ll)
+    while cont1 < longitud-1:
+      
+      if cont1+2 < longitud and listarocas[cont1+2] == 0:
+        print("entra1")
         cont += 1
-        print("el contador va en fin",cont)
-    print(salto)
-    return(salto)
-saltando_rocas([0,0,0,1,0,1,0,1])
+        cont1 += 2 
+      else: 
+        print("entra2")
+        cont += 1
+        cont1 += 1
+      #saltando_rocas.append(('saltando_rocas', c, [ll], {}))
+      saltos = cont
+      print(saltos)
+    return(saltos)
+saltando_rocas([1,1,0,0])
 
 
 def pares_medias(listapares):
