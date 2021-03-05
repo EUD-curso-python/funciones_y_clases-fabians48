@@ -98,38 +98,24 @@ def saltando_rocas(listarocas):
     El objetivo es devolver el número mínimo de saltos que debe realizar el 
     jugador para ganar la partida
     '''
-    saltos = 0
+    salto = 0
     cont = 0
     
     longitud = len(listarocas)
-    #for i in listarocas:
-      #cont += 1
-      #if i==0:
-        #if cont == longitud:
-          #break
-        #else:
-          #if (listarocas[cont])==1:
-            #saltos += 1
+    
+  
     while cont < longitud:
-      #print("entra cont", cont)
-      if listarocas[cont]==0:
-        if cont+1 == longitud:
-          if listarocas[cont]==0:
-            saltos += 1
-          else:
-            break
-        else:
-          if (listarocas[cont+1])==1:
-     #       print('cont',cont)
-            saltos += 1
-      else:
-        cont += 1  
+      if listarocas[cont]==0 and listarocas[cont]==1:
+        salto += 1
+      elif listarocas[cont]==0 and listarocas[cont]==0:
+        salto += 1
+        cont += 1
       cont += 1
-    #print(saltos)
-    return(saltos)
-    pass
+    print(salto)
+    return(salto)
 
 saltando_rocas([0,1,1,0,0,0,1,0])
+
 
 def pares_medias(listapares):
     '''Contar pares de medias
@@ -247,4 +233,4 @@ class Persona1(Persona):
 
 fecha = datetime.datetime.strptime("1985-10-21", "%Y-%m-%d")
 edd = Persona1(["fabian", "emilio"], ["solano", "aragon"], fecha)
-print(edd.edad())
+#print(edd.edad())
