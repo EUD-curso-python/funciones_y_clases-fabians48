@@ -123,7 +123,7 @@ def saltando_rocas(listarocas):
     print(salto)
     return(salto)
 
-saltando_rocas([0,1,1,0,0,0,1,0])
+saltando_rocas([0,1,0,1,0,1,0,1])
 
 
 def pares_medias(listapares):
