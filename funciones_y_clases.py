@@ -200,18 +200,26 @@ class Persona:
     self.apellidos = apellidos
 
   def nombre_completo(self):
-    #cadena1=self.padre+","+self.madre
     cadena1=""
+    cadena2=""
+    cadena3=""
     for i in self.nombres:
       if cadena1 == "":
         cadena1 = str(i)
       else:
         cadena1 = cadena1 + " " + str(i)
-    print(cadena1)
-    return cadena1
+
+    for i in self.apellidos:
+      if cadena2 == "":
+        cadena2 = str(i)
+      else:
+        cadena2 = cadena2 + " " + str(i)
+    cadena3 = cadena1 + " " + cadena2
+    return cadena3
 
 nombres = Persona(["Fabian", "Emilio"])
-nombres.nombre_completo()
+apellidos = Persona(["Solano", "Aragon"])
+print(nombres.nombre_completo())
 
 # Crear una clase llamada `Persona1` que herede de la clase `Persona`, y que en su
 # constructor reciba además de los atributos del padre, una variable tipo 
